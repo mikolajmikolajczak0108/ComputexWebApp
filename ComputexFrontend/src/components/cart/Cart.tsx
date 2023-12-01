@@ -45,7 +45,7 @@ const CartPage: React.FC = () => {
     const fetchCartItems = async () => {
       try {
         const token = localStorage.getItem("token");
-        const response = await axios.get("http://127.0.0.1:8000/cart/", {
+        const response = await axios.get("https://computexapi-55f3a80f11dd.herokuapp.com/cart/", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -63,7 +63,7 @@ const CartPage: React.FC = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        `http://127.0.0.1:8000/cart/add-quantity/${id}/`,
+        `https://computexapi-55f3a80f11dd.herokuapp.com/cart/add-quantity/${id}/`,
         {},
         {
           headers: {
@@ -94,7 +94,7 @@ const CartPage: React.FC = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        `http://127.0.0.1:8000/cart/subtract-quantity/${id}/`,
+        `https://computexapi-55f3a80f11dd.herokuapp.com/cart/subtract-quantity/${id}/`,
         {},
         {
           headers: {
@@ -127,7 +127,7 @@ const CartPage: React.FC = () => {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://127.0.0.1:8000/cart/buy/",
+        "https://computexapi-55f3a80f11dd.herokuapp.com/cart/buy/",
         {},
         {
           headers: {
@@ -160,7 +160,7 @@ const CartPage: React.FC = () => {
   const handleRemoveItem = async (id: number) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://127.0.0.1:8000/cart/remove-item/${id}/`, {
+      await axios.delete(`https://computexapi-55f3a80f11dd.herokuapp.com/cart/remove-item/${id}/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
