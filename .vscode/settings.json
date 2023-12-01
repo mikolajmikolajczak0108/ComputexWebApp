@@ -4,5 +4,6 @@
     },
     "python.formatting.provider": "none",
     "editor.formatOnSave": true,
-    "notebook.formatOnSave.enabled": true
+    "notebook.formatOnSave.enabled": true,
+    "editor.inlineSuggest.showToolbar": "always"
 }
