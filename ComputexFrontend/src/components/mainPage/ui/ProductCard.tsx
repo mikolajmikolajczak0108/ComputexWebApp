@@ -52,7 +52,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://127.0.0.1:8000/cart/",
+        "https://computexapi-55f3a80f11dd.herokuapp.com/cart/",
         {
           product_name: product.name, // Assuming product.name contains the product's name
           product_price: product.price, // Assuming product.price contains the product's price
