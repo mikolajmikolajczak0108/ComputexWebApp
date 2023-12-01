@@ -28,7 +28,7 @@ type Product = {
 };
 const fetchProducts = async (): Promise<Product[]> => {
   try {
-    const response = await fetch("http://localhost:8000/products/");
+    const response = await fetch("https://computexapi-55f3a80f11dd.herokuapp.com/products/");
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
